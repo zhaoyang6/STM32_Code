@@ -7,14 +7,15 @@
 
   <Targets>
     <Target>
-      <TargetName>LED</TargetName>
+      <TargetName>mavlink</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>5060300::V5.06 update 3 (build 300)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103ZE</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F1xx_DFP.2.3.0</PackID>
+          <PackID>Keil.STM32F1xx_DFP.2.1.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IROM(0x08000000,0x80000) IRAM(0x20000000,0x10000) CPUTYPE("Cortex-M3") CLOCK(12000000) ELITTLE</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -334,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED</IncludePath>
+              <IncludePath>..\USER;..\CORE;..\STM32F10x_FWLib\inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\LED;..\MAVLINK;..\MAVLINK\common;..\HARDWARE\UART</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -398,6 +399,11 @@
         <Group>
           <GroupName>HARDWARE</GroupName>
           <Files>
+            <File>
+              <FileName>uartfifo.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\UART\uartfifo.c</FilePath>
+            </File>
             <File>
               <FileName>led.c</FileName>
               <FileType>1</FileType>
@@ -471,6 +477,71 @@
           </Files>
         </Group>
         <Group>
+          <GroupName>MAVlink</GroupName>
+          <Files>
+            <File>
+              <FileName>checksum.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\checksum.h</FilePath>
+            </File>
+            <File>
+              <FileName>mavlink_conversions.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\mavlink_conversions.h</FilePath>
+            </File>
+            <File>
+              <FileName>mavlink_helpers.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\mavlink_helpers.h</FilePath>
+            </File>
+            <File>
+              <FileName>mavlink_types.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\mavlink_types.h</FilePath>
+            </File>
+            <File>
+              <FileName>protocol.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\protocol.h</FilePath>
+            </File>
+            <File>
+              <FileName>mavlink.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\common\mavlink.h</FilePath>
+            </File>
+            <File>
+              <FileName>testsuite.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\common\testsuite.h</FilePath>
+            </File>
+            <File>
+              <FileName>mavlink_msg_sys_status.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\common\mavlink_msg_sys_status.h</FilePath>
+            </File>
+            <File>
+              <FileName>mavlink_avoid_errors.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\mavlink_avoid_errors.h</FilePath>
+            </File>
+            <File>
+              <FileName>open_tel_mavlink.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\MAVLINK\open_tel_mavlink.c</FilePath>
+            </File>
+            <File>
+              <FileName>open_tel_mavlink.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\open_tel_mavlink.h</FilePath>
+            </File>
+            <File>
+              <FileName>define.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>..\MAVLINK\define.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
           <GroupName>README</GroupName>
           <Files>
             <File>
@@ -483,11 +554,5 @@
       </Groups>
     </Target>
   </Targets>
-
-  <RTE>
-    <apis/>
-    <components/>
-    <files/>
-  </RTE>
 
 </Project>

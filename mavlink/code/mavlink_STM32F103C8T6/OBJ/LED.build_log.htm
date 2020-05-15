@@ -1,0 +1,131 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.21.1.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: hardware HardWare, hardware, LIC=21EUH-WPRYA-3M79Q-N90RB-SJ4CY-BN6VK
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.21a
+Toolchain Path:  D:\keil\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 3 (build 300)
+Assembler:       Armasm.exe V5.06 update 3 (build 300)
+Linker/Locator:  ArmLink.exe V5.06 update 3 (build 300)
+Library Manager: ArmAr.exe V5.06 update 3 (build 300)
+Hex Converter:   FromElf.exe V5.06 update 3 (build 300)
+CPU DLL:         SARMCM3.DLL V5.21a
+Dialog DLL:      DARMSTM.DLL V1.66.0.1
+Target DLL:      UL2CM3.DLL V1.158.5.0
+Dialog DLL:      TARMSTM.DLL V1.65.0.0
+ 
+<h2>Project:</h2>
+E:\4.GitHub\STM32_Code\mavlink\code\mavlink_STM32F103C8T6\USER\mavlink.uvprojx
+Project File Date:  11/16/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'D:\keil\ARM\ARMCC\Bin'
+Build target 'mavlink'
+compiling open_tel_mavlink.c...
+..\MAVLINK\mavlink_avoid_errors.h(9): error:  #11-D: unrecognized preprocessing directive
+  #defineinline __inline
+..\MAVLINK\common\../checksum.h(34): warning:  #260-D: explicit type is missing ("int" assumed)
+  static 
+nline void crc_accumulate(uint8_t data, uint16_t *crcAccum)
+..\MAVLINK\common\../checksum.h(34): error:  #65: expected a ";"
+  static 
+nline void crc_accumulate(uint8_t data, uint16_t *crcAccum)
+..\MAVLINK\common\../mavlink_conversions.h(40): warning:  #260-D: explicit type is missing ("int" assumed)
+  
+AVLINK_HELPER void mavlink_quaternion_to_dcm(const float quaternion[4], float dcm[3][3])
+..\MAVLINK\common\../mavlink_conversions.h(40): error:  #65: expected a ";"
+  
+AVLINK_HELPER void mavlink_quaternion_to_dcm(const float quaternion[4], float dcm[3][3])
+..\MAVLINK\common\../mavlink_conversions.h(92): warning:  #12-D: parsing restarts here after previous syntax error
+      *yaw = psi;
+..\MAVLINK\common\../mavlink_conversions.h(93): error:  #169: expected a declaration
+  }
+..\MAVLINK\common\../mavlink_conversions.h(171): warning:  #12-D: parsing restarts here after previous syntax error
+          dcm_j = (dcm_i + 1) % 3;
+..\MAVLINK\common\../mavlink_conversions.h(172): error:  #77-D: this declaration has no storage class or type specifier
+          dcm_k = (dcm_i + 2) % 3;
+..\MAVLINK\common\../mavlink_conversions.h(172): error:  #20: identifier "dcm_i" is undefined
+          dcm_k = (dcm_i + 2) % 3;
+..\MAVLINK\common\../mavlink_conversions.h(174): error:  #77-D: this declaration has no storage class or type specifier
+          s = sqrtf((dcm[dcm_i][dcm_i] - dcm[dcm_j][dcm_j] - dcm[dcm_k][dcm_k]) + 1.0f);
+..\MAVLINK\common\../mavlink_conversions.h(174): error:  #59: function call is not allowed in a constant expression
+          s = sqrtf((dcm[dcm_i][dcm_i] - dcm[dcm_j][dcm_j] - dcm[dcm_k][dcm_k]) + 1.0f);
+..\MAVLINK\common\../mavlink_conversions.h(174): error:  #20: identifier "dcm" is undefined
+          s = sqrtf((dcm[dcm_i][dcm_i] - dcm[dcm_j][dcm_j] - dcm[dcm_k][dcm_k]) + 1.0f);
+..\MAVLINK\common\../mavlink_conversions.h(174): error:  #20: identifier "dcm_j" is undefined
+          s = sqrtf((dcm[dcm_i][dcm_i] - dcm[dcm_j][dcm_j] - dcm[dcm_k][dcm_k]) + 1.0f);
+..\MAVLINK\common\../mavlink_conversions.h(174): error:  #28: expression must have a constant value
+          s = sqrtf((dcm[dcm_i][dcm_i] - dcm[dcm_j][dcm_j] - dcm[dcm_k][dcm_k]) + 1.0f);
+..\MAVLINK\common\../mavlink_conversions.h(174): error:  #28: expression must have a constant value
+          s = sqrtf((dcm[dcm_i][dcm_i] - dcm[dcm_j][dcm_j] - dcm[dcm_k][dcm_k]) + 1.0f);
+..\MAVLINK\common\../mavlink_conversions.h(175): error:  #28: expression must have a constant value
+          quaternion[dcm_i + 1] = s * 0.5f;
+..\MAVLINK\common\../mavlink_conversions.h(176): error:  #77-D: this declaration has no storage class or type specifier
+          s = 0.5f / s;
+..\MAVLINK\common\../mavlink_conversions.h(176): error:  #148: variable "s" has already been initialized
+          s = 0.5f / s;
+..\MAVLINK\common\../mavlink_conversions.h(176): error:  #28: expression must have a constant value
+          s = 0.5f / s;
+..\MAVLINK\common\../mavlink_conversions.h(177): error:  #148: variable "quaternion" has already been initialized
+          quaternion[dcm_j + 1] = (dcm[dcm_i][dcm_j] + dcm[dcm_j][dcm_i]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(177): error:  #28: expression must have a constant value
+          quaternion[dcm_j + 1] = (dcm[dcm_i][dcm_j] + dcm[dcm_j][dcm_i]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(178): error:  #28: expression must have a constant value
+          quaternion[dcm_k + 1] = (dcm[dcm_k][dcm_i] + dcm[dcm_i][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(178): error:  #148: variable "quaternion" has already been initialized
+          quaternion[dcm_k + 1] = (dcm[dcm_k][dcm_i] + dcm[dcm_i][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(178): error:  #28: expression must have a constant value
+          quaternion[dcm_k + 1] = (dcm[dcm_k][dcm_i] + dcm[dcm_i][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(178): error:  #28: expression must have a constant value
+          quaternion[dcm_k + 1] = (dcm[dcm_k][dcm_i] + dcm[dcm_i][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(178): error:  #28: expression must have a constant value
+          quaternion[dcm_k + 1] = (dcm[dcm_k][dcm_i] + dcm[dcm_i][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(179): error:  #94-D: the size of an array must be greater than zero
+          quaternion[0] = (dcm[dcm_k][dcm_j] - dcm[dcm_j][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(179): error:  #77-D: this declaration has no storage class or type specifier
+          quaternion[0] = (dcm[dcm_k][dcm_j] - dcm[dcm_j][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(179): error:  #148: variable "quaternion" has already been initialized
+          quaternion[0] = (dcm[dcm_k][dcm_j] - dcm[dcm_j][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(179): error:  #28: expression must have a constant value
+          quaternion[0] = (dcm[dcm_k][dcm_j] - dcm[dcm_j][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(179): error:  #28: expression must have a constant value
+          quaternion[0] = (dcm[dcm_k][dcm_j] - dcm[dcm_j][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(179): error:  #28: expression must have a constant value
+          quaternion[0] = (dcm[dcm_k][dcm_j] - dcm[dcm_j][dcm_k]) * s;
+..\MAVLINK\common\../mavlink_conversions.h(180): error:  #169: expected a declaration
+      }
+..\MAVLINK\open_tel_mavlink.c: 4 warnings, 30 errors
+compiling main.c...
+..\MAVLINK\mavlink_avoid_errors.h(9): error:  #11-D: unrecognized preprocessing directive
+  #defineinline __inline
+..\MAVLINK\common\../mavlink_helpers.h(134): error:  #20: identifier "mavlink_system" is undefined
+  	buf[3] = mavlink_system.sysid;
+..\MAVLINK\common\../mavlink_helpers.h(654): warning:  #223-D: function "comm_send_ch" declared implicitly
+  		comm_send_ch(chan, (uint8_t)buf[i]);
+..\MAVLINK\open_tel_mavlink.h(10): warning:  #1-D: last line of file ends without a newline
+  #endif/*__OPENTEL_MAVLINK_H*/
+main.c(25): warning:  #188-D: enumerated type mixed with another type
+  		mavlink_send_message(0, MSG_HEARTBEAT,0);
+main.c(26): warning:  #188-D: enumerated type mixed with another type
+  		mavlink_send_message(0, MSG_LOCATION,0);
+main.c(39): warning:  #1-D: last line of file ends without a newline
+  }
+main.c: 5 warnings, 2 errors
+"..\OBJ\LED.axf" - 32 Error(s), 9 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  E:\4.GitHub\STM32_Code\mavlink\code\mavlink_STM32F103C8T6\USER\RTE
+  D:\keil\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

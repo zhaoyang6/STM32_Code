@@ -1,0 +1,16 @@
+..\obj\open_tel_mavlink.o: ..\MAVLINK\open_tel_mavlink.c
+..\obj\open_tel_mavlink.o: ..\MAVLINK\open_tel_mavlink.h
+..\obj\open_tel_mavlink.o: ..\MAVLINK\define.h
+..\obj\open_tel_mavlink.o: ..\MAVLINK\mavlink_avoid_errors.h
+..\obj\open_tel_mavlink.o: D:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+..\obj\open_tel_mavlink.o: D:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+..\obj\open_tel_mavlink.o: ..\MAVLINK\mavlink_types.h
+..\obj\open_tel_mavlink.o: ..\MAVLINK\common\mavlink.h
+..\obj\open_tel_mavlink.o: ..\MAVLINK\common\version.h
+..\obj\open_tel_mavlink.o: ..\MAVLINK\common\common.h
+..\obj\open_tel_mavlink.o: ..\MAVLINK\common\../protocol.h
+..\obj\open_tel_mavlink.o: D:\keil\ARM\ARMCC\Bin\..\include\string.h
+..\obj\open_tel_mavlink.o: ..\MAVLINK\common\../mavlink_helpers.h
+..\obj\open_tel_mavlink.o: ..\MAVLINK\common\../checksum.h
+..\obj\open_tel_mavlink.o: ..\MAVLINK\common\../mavlink_conversions.h
+..\obj\open_tel_mavlink.o: D:\keil\ARM\ARMCC\Bin\..\include\math.h
